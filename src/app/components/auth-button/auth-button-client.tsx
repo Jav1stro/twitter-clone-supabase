@@ -25,7 +25,7 @@ export async function AuthButton({ session }: { session: Session | null }) {
   };
 
   return (
-    <header>
+    <div style={{marginTop:'20PX'}}>
       {session === null ? (
         <button
           type="button"
@@ -36,8 +36,14 @@ export async function AuthButton({ session }: { session: Session | null }) {
           Iniciar sesión con Github
         </button>
       ) : (
-        <button onClick={handleSignOut}>Sign Out</button>
+        <button
+          onClick={handleSignOut}
+          type="button"
+          className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"
+        >
+          Cerrar sesión
+        </button>
       )}
-    </header>
+    </div>
   );
 }
