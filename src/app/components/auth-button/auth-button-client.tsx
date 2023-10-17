@@ -25,7 +25,7 @@ export async function AuthButton({ session }: { session: Session | null }) {
   };
 
   return (
-    <div style={{marginTop:'20PX'}}>
+    <div style={{marginTop:'20px'}}>
       {session === null ? (
         <button
           type="button"
